@@ -6,6 +6,7 @@ import {
     FloatingInput,
     ShineButton,
     LiftedCard,
+    CursorGravityOrbs,
 } from "./components";
 import ComponentShowcase from "./components/ComponentShowcase";
 
@@ -66,6 +67,19 @@ export default function Home() {
                             </div>
                         </div>
                     </ComponentShowcase>
+                    <div className="sm:col-span-2 lg:col-span-3">
+                        <ComponentShowcase sourcePath="CursorGravityOrbs">
+                            <div className="rounded-2xl border border-zinc-200/80 bg-white/90 p-6 shadow-sm backdrop-blur-sm">
+                                <span className="text-xs font-medium uppercase tracking-widest text-zinc-400">
+                                    Cursor gravity orbs, they&apos;re drawn to
+                                    you. Literally.
+                                </span>
+                                <div className="mt-4">
+                                    <CursorGravityOrbs />
+                                </div>
+                            </div>
+                        </ComponentShowcase>
+                    </div>
                 </section>
             </main>
         </div>
