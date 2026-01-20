@@ -5,9 +5,9 @@ export default function GradientBorderCard() {
       <div className="absolute inset-[2px] rounded-[14px] bg-white" />
       <div className="relative rounded-2xl bg-gradient-to-br from-zinc-50 to-white p-6">
         <span className="text-xs font-medium uppercase tracking-widest text-violet-600">Gradient border</span>
-        <h3 className="mt-2 text-xl font-semibold text-zinc-800">Animated edge</h3>
+        <h3 className="mt-2 text-xl font-semibold text-zinc-800">Too many colors</h3>
         <p className="mt-2 text-sm leading-relaxed text-zinc-600">
-          Gradient border via pseudo-layers: outer gradient, inner mask, content. No SVG.
+          Violet, fuchsia, amber. It&apos;s having a moment. No SVG.
         </p>
       </div>
     </div>

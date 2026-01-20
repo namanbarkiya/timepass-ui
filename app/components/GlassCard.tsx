@@ -4,9 +4,9 @@ export default function GlassCard() {
       <div className="absolute -inset-px rounded-2xl bg-gradient-to-br from-white/40 via-transparent to-transparent opacity-60" />
       <div className="relative">
         <span className="text-xs font-medium uppercase tracking-widest text-zinc-500">Glass Card</span>
-        <h3 className="mt-2 text-xl font-semibold text-zinc-800">Frosted depth</h3>
+        <h3 className="mt-2 text-xl font-semibold text-zinc-800">Frosted like your screen at 2am</h3>
         <p className="mt-2 text-sm leading-relaxed text-zinc-600">
-          Layered backdrop blur, soft borders, and a gradient overlay. Pure Tailwind.
+          Blur so smooth even impostor syndrome looks ok through it.
         </p>
       </div>
     </div>

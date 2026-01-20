@@ -5,9 +5,9 @@ export default function LiftedCard() {
       style={{ transform: "perspective(1000px) rotateX(0)" }}
     >
       <span className="text-xs font-medium uppercase tracking-widest text-zinc-400">3D lift</span>
-      <h3 className="mt-2 text-xl font-semibold text-zinc-800">Hover to lift</h3>
+      <h3 className="mt-2 text-xl font-semibold text-zinc-800">Hover to feel something</h3>
       <p className="mt-2 text-sm leading-relaxed text-zinc-600">
-        translate-y and shadow transitions for a subtle 3D elevation. Clean and tactile.
+        It lifts. Your mood might too. Small wins.
       </p>
     </div>
   );

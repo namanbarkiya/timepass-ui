@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "timepass ui",
-  description: "Classy, difficult Tailwind CSS components.",
+  description: "Stuff we built when we had time to kill.",
 };
 
 export default function RootLayout({

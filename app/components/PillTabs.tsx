@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-const tabs = ["Overview", "Analytics", "Settings"];
+const tabs = ["Vibes", "The numbers", "Chaos mode"];
 
 export default function PillTabs() {
   const [active, setActive] = useState(0);

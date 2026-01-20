@@ -26,7 +26,7 @@ export default function FloatingInput() {
             : "top-1/2 -translate-y-1/2 text-base text-zinc-400"
         }`}
       >
-        Email address
+        Your email (no spam, probably)
       </label>
     </div>
   );

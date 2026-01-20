@@ -20,8 +20,7 @@ export default function Home() {
                         Components
                     </h1>
                     <p className="mt-2 text-zinc-600">
-                        I don&apos;t know, they are just components use it or
-                        not
+                        Looks good. Copy if you want.
                     </p>
                 </section>
 
@@ -39,7 +38,7 @@ export default function Home() {
                         <ComponentShowcase sourcePath="PillTabs">
                             <div className="rounded-2xl border border-zinc-200/80 bg-white/90 p-6 shadow-sm backdrop-blur-sm">
                                 <span className="text-xs font-medium uppercase tracking-widest text-zinc-400">
-                                    Pill tabs
+                                    Pill tabs (go on, pick one)
                                 </span>
                                 <div className="mt-4 max-w-sm">
                                     <PillTabs />
@@ -50,7 +49,7 @@ export default function Home() {
                     <ComponentShowcase sourcePath="FloatingInput">
                         <div className="rounded-2xl border border-zinc-200/80 bg-white/90 p-6 shadow-sm backdrop-blur-sm">
                             <span className="text-xs font-medium uppercase tracking-widest text-zinc-400">
-                                Floating label
+                                Floating label (it really floats)
                             </span>
                             <div className="mt-4">
                                 <FloatingInput />
@@ -60,7 +59,7 @@ export default function Home() {
                     <ComponentShowcase sourcePath="ShineButton">
                         <div className="rounded-2xl border border-zinc-200/80 bg-white/90 p-6 shadow-sm backdrop-blur-sm">
                             <span className="text-xs font-medium uppercase tracking-widest text-zinc-400">
-                                Shine button
+                                Shine button (hover it)
                             </span>
                             <div className="mt-4">
                                 <ShineButton />

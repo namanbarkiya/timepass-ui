@@ -21,7 +21,7 @@ export default function GlassNavbar() {
               clipRule="evenodd"
             />
           </svg>
-          GitHub
+          Steal the code
         </a>
       </div>
     </nav>
