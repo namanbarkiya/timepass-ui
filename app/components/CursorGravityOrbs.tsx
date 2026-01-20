@@ -4,7 +4,7 @@ import { useState, useRef, useEffect } from "react";
 
 const ORB_COUNT = 14;
 const ATTRACT_RADIUS = 100;
-const HUES = [260, 280, 300, 320]; // violet → fuchsia
+const HUES = [205, 265, 310, 350]; // cyan, violet, magenta, rose
 
 export default function CursorGravityOrbs() {
     const containerRef = useRef<HTMLDivElement>(null);
@@ -14,7 +14,7 @@ export default function CursorGravityOrbs() {
     >([]);
     const cursorRef = useRef<{ x: number; y: number } | null>(null);
     const homesRef = useRef<{ x: number; y: number; speed: number }[]>([]);
-    const rafRef = useRef<number>();
+    const rafRef = useRef<number | undefined>(undefined);
     const positionsRef = useRef<{ x: number; y: number }[]>([]);
 
     // Measure container and init home positions once
@@ -115,7 +115,10 @@ export default function CursorGravityOrbs() {
             ref={containerRef}
             onMouseMove={onMouseMove}
             onMouseLeave={onMouseLeave}
-            className="relative h-56 w-full overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-violet-950 via-fuchsia-950/95 to-violet-950 shadow-2xl"
+            className="relative h-56 w-full overflow-hidden rounded-2xl border border-white/10 shadow-2xl"
+            style={{
+                background: "linear-gradient(135deg, #0f0e1a 0%, #1a0a2e 45%, #2d0a2d 100%)",
+            }}
         >
             {/* Soft noise-like grain */}
             <div
@@ -136,14 +139,14 @@ export default function CursorGravityOrbs() {
                             width: o.size,
                             height: o.size,
                             transform: "translate(-50%, -50%)",
-                            background: `radial-gradient(circle at 30% 30%, hsl(${o.hue} 80% 75% / 0.7), hsl(${o.hue} 70% 55% / 0.25))`,
-                            boxShadow: `0 0 ${o.size * 2}px hsl(${o.hue} 90% 70% / 0.5)`,
+                            background: `radial-gradient(circle at 28% 28%, hsl(${o.hue} 88% 85% / 0.9), hsl(${o.hue} 78% 62% / 0.4) 60%, hsl(${o.hue} 70% 50% / 0.15))`,
+                            boxShadow: `0 0 ${o.size * 2.5}px hsl(${o.hue} 85% 72% / 0.6), 0 0 ${o.size * 5}px hsl(${o.hue} 75% 60% / 0.25)`,
                         }}
                     />
                 ))}
             {/* Center hint */}
             <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
-                <span className="rounded-full bg-white/5 px-4 py-1.5 text-xs font-medium tracking-wider text-white/60 backdrop-blur-sm">
+                <span className="rounded-full bg-white/5 px-4 py-1.5 text-xs font-medium tracking-wider text-violet-200/80 backdrop-blur-sm">
                     your cursor is the sun; the orbs can&apos;t help themselves
                 </span>
             </div>

@@ -1,5 +1,6 @@
 "use client";
 
+import { Code2, Copy, Link, X } from "lucide-react";
 import { useEffect, useState } from "react";
 
 type Props = {
@@ -8,44 +9,19 @@ type Props = {
   children: React.ReactNode;
 };
 
-function CodeIcon({ className }: { className?: string }) {
-  return (
-    <svg
-      className={className}
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.75"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden
-    >
-      <polyline points="16 18 22 12 16 6" />
-      <polyline points="8 6 2 12 8 18" />
-    </svg>
-  );
-}
-
-function CloseIcon({ className }: { className?: string }) {
-  return (
-    <svg
-      className={className}
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden
-    >
-      <path d="M18 6 6 18" />
-      <path d="m6 6 12 12" />
-    </svg>
-  );
-}
+const GITHUB_BASE = "https://github.com/namanbarkiya/timepass-ui";
 
 export default function ComponentShowcaseClient({ source, sourcePath, children }: Props) {
   const [open, setOpen] = useState(false);
+  const [copied, setCopied] = useState(false);
+
+  const githubFileUrl = `${GITHUB_BASE}/blob/main/app/components/${sourcePath}.tsx`;
+
+  const handleCopy = async () => {
+    await navigator.clipboard.writeText(source);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
 
   useEffect(() => {
     if (!open) return;
@@ -71,7 +47,7 @@ export default function ComponentShowcaseClient({ source, sourcePath, children }
           className="rounded-xl p-2 text-zinc-400 transition-colors hover:bg-zinc-100 hover:text-zinc-700"
           aria-label={`Show code for ${sourcePath}`}
         >
-          <CodeIcon className="h-5 w-5" />
+          <Code2 className="h-5 w-5" aria-hidden />
         </button>
       </div>
 
@@ -94,21 +70,40 @@ export default function ComponentShowcaseClient({ source, sourcePath, children }
             onClick={(e) => e.stopPropagation()}
           >
             {/* Header */}
-            <div className="flex shrink-0 items-center justify-between border-b border-zinc-200/80 bg-zinc-50/90 px-5 py-3">
+            <div className="flex shrink-0 items-center justify-between gap-4 border-b border-zinc-200/80 bg-zinc-50/90 px-5 py-3">
               <span
                 id="code-modal-title"
-                className="font-mono text-sm font-medium text-zinc-700"
+                className="truncate font-mono text-sm font-medium text-zinc-700"
               >
                 {sourcePath}.tsx
               </span>
-              <button
-                type="button"
-                onClick={() => setOpen(false)}
-                className="rounded-lg p-2 text-zinc-500 transition-colors hover:bg-zinc-200/80 hover:text-zinc-800"
-                aria-label="Close"
-              >
-                <CloseIcon className="h-5 w-5" />
-              </button>
+              <div className="flex shrink-0 items-center gap-1">
+                <button
+                  type="button"
+                  onClick={handleCopy}
+                  className="rounded-lg px-3 py-2 text-sm font-medium text-zinc-600 transition-colors hover:bg-zinc-200/80 hover:text-zinc-800"
+                  aria-label="Copy code"
+                >
+                  {copied ? "Copied!" : <Copy className="h-4 w-4" aria-hidden />}
+                </button>
+                <a
+                  href={githubFileUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded-lg p-2 text-zinc-500 transition-colors hover:bg-zinc-200/80 hover:text-zinc-800"
+                  aria-label={`View ${sourcePath}.tsx on GitHub`}
+                >
+                  <Link className="h-4 w-4" aria-hidden />
+                </a>
+                <button
+                  type="button"
+                  onClick={() => setOpen(false)}
+                  className="rounded-lg p-2 text-zinc-500 transition-colors hover:bg-zinc-200/80 hover:text-zinc-800"
+                  aria-label="Close"
+                >
+                  <X className="h-5 w-5" aria-hidden />
+                </button>
+              </div>
             </div>
 
             {/* Code */}
