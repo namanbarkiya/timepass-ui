@@ -14,7 +14,7 @@ export default function GlassNavbar() {
                     Timepass UI
                 </a>
                 <a
-                    href="https://github.com"
+                    href="https://github.com/namanbarkiya/timepass-ui/tree/main/app/components"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 rounded-xl border border-zinc-300/50 bg-white/40 px-4 py-2 text-sm font-medium text-zinc-700 shadow-sm transition-all hover:border-zinc-400/60 hover:bg-white/70 hover:shadow"
