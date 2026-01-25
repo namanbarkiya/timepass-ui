@@ -6,3 +6,5 @@ export { default as FloatingInput } from "./FloatingInput";
 export { default as ShineButton } from "./ShineButton";
 export { default as LiftedCard } from "./LiftedCard";
 export { default as CursorGravityOrbs } from "./CursorGravityOrbs";
+export { default as SpotlightCard } from "./SpotlightCard";
+export { default as LampBanner } from "./LampBanner";

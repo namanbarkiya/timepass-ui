@@ -7,6 +7,8 @@ import {
     ShineButton,
     LiftedCard,
     CursorGravityOrbs,
+    SpotlightCard,
+    LampBanner,
 } from "./components";
 import ComponentShowcase from "./components/ComponentShowcase";
 
@@ -77,6 +79,26 @@ export default function Home() {
                                 <div className="mt-4">
                                     <CursorGravityOrbs />
                                 </div>
+                            </div>
+                        </ComponentShowcase>
+                    </div>
+                    <ComponentShowcase sourcePath="SpotlightCard">
+                        <div className="rounded-2xl border border-zinc-200/80 bg-white/90 p-6 shadow-sm backdrop-blur-sm">
+                            <span className="text-xs font-medium uppercase tracking-widest text-zinc-400">
+                                Spotlight card — you hold the flashlight
+                            </span>
+                            <div className="mt-4">
+                                <SpotlightCard />
+                            </div>
+                        </div>
+                    </ComponentShowcase>
+                    <div className="sm:col-span-2 lg:col-span-3">
+                        <ComponentShowcase sourcePath="LampBanner">
+                            <div className="overflow-hidden rounded-2xl border border-zinc-200/80 bg-white/90 shadow-sm backdrop-blur-sm">
+                                <span className="block border-b border-zinc-200/80 px-6 py-3 text-xs font-medium uppercase tracking-widest text-zinc-400">
+                                    Spotlight banner — the beam spots where you hover
+                                </span>
+                                <LampBanner />
                             </div>
                         </ComponentShowcase>
                     </div>
