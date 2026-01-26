@@ -8,3 +8,4 @@ export { default as LiftedCard } from "./LiftedCard";
 export { default as CursorGravityOrbs } from "./CursorGravityOrbs";
 export { default as SpotlightCard } from "./SpotlightCard";
 export { default as LampBanner } from "./LampBanner";
+export { default as IndianFlagBanner } from "./IndianFlagBanner";

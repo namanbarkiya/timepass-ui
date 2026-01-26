@@ -9,6 +9,7 @@ import {
     CursorGravityOrbs,
     SpotlightCard,
     LampBanner,
+    IndianFlagBanner,
 } from "./components";
 import ComponentShowcase from "./components/ComponentShowcase";
 
@@ -99,6 +100,16 @@ export default function Home() {
                                     Spotlight banner — the beam spots where you hover
                                 </span>
                                 <LampBanner />
+                            </div>
+                        </ComponentShowcase>
+                    </div>
+                    <div className="sm:col-span-2 lg:col-span-3">
+                        <ComponentShowcase sourcePath="IndianFlagBanner">
+                            <div className="overflow-hidden rounded-2xl border border-zinc-200/80 bg-white/90 shadow-sm backdrop-blur-sm">
+                                <span className="block border-b border-zinc-200/80 px-6 py-3 text-xs font-medium uppercase tracking-widest text-zinc-400">
+                                    Indian flag — animated WebGL tricolor
+                                </span>
+                                <IndianFlagBanner />
                             </div>
                         </ComponentShowcase>
                     </div>
